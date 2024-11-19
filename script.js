@@ -4,7 +4,7 @@ const menu = document.querySelector('.menu');
 const start = document.querySelector('.menu .controls .start');
 start.onclick = () => {
     menu.style.top = '100%';
-    zroyacum();
+    reset();
 }
 const infoButton = document.querySelector('.menu .btn.info');
 const info = document.querySelector('.infoMenu');
@@ -129,10 +129,10 @@ tableArrow.onclick = () => {
 
 exitGame.onclick = function() {
     menu.style.top = '0';
-    zroyacum();
+    reset();
     winner.style.left = '100%';
 }
-function zroyacum() {
+function reset() {
     for (let i = 0; i < box.length; i++) {
         box[i].innerText = '';
         box[i].style.pointerEvents = 'auto';
